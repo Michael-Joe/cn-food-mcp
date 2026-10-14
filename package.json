@@ -1,6 +1,6 @@
 {
   "name": "cn-food-mcp",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "MCP server for Chinese food nutrition data (~1724 foods, 25 nutrients per 100g)",
   "type": "module",
   "bin": {

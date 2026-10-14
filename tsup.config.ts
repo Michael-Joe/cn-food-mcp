@@ -11,9 +11,10 @@ export default defineConfig({
     js: "#!/usr/bin/env node",
   },
   onSuccess: async () => {
-    // Copy foods.json to dist/data/ so readFileSync can find it at runtime
+    // Copy data files to dist/data/ so readFileSync can find them at runtime
     mkdirSync("dist/data", { recursive: true });
     cpSync("src/data/foods.json", "dist/data/foods.json");
-    console.log("Copied foods.json to dist/data/");
+    cpSync("src/data/aliases.json", "dist/data/aliases.json");
+    console.log("Copied foods.json + aliases.json to dist/data/");
   },
 });
